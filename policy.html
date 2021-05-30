@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LIC|NARESH MEHER</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+ <!-- STYLESHEET CSS FILES -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/nivo-lightbox.css">
+<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+<link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<!-- preloader section -->
+<div class="preloader">
+  <div class="sk-spinner sk-spinner-rotating-plane"></div>
+</div>
+<!-- navigation section -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> </button>
+      <a href="#" class="navbar-brand"><img class="nav navbar-brand"src="images/LIC_LOGO_1.png" alt="liclogo">LIC | CMS</a></div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"class="active">POLICY DETA ENTRY</a></li>
+        <li><a href="searchpolicy.html" class="smoothScroll">SEARCH POLICY</a></li>
+        <li><a href="personal.html" class="smoothScroll">PERSONAL DETAILS ENTRY</a></li>
+        <li><a href="searchpersonal.html" class="smoothScroll">SEARCH DETAILS</a></li>
+        <a href="logout.php"><span id="log" class="btn btn-danger" style="margin-top: 15px;font-size: large;text-shadow: 2px 2px black;"><i class="glyphicon glyphicon-off"></i> Logout</span></a> 
+      </ul>
+    
+    </div>  
+  </div>
+</div>
+
+<!-- policy details entry section -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 title">
+        <h2>Customer Management System</h2>
+        <h3>Policy details entry</h3>
+        <hr>
+       <p style="color:red;font-size: larger;" id="mes"></p>
+        <form class="form" id="form1" method="POST">
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Policy Number : </b>
+                </label>
+            <label class="form-check-label">
+            <input id="pnu" type="tel" class="form-control" name="policynum"placeholder="Policy Number" required>
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Policy holder name : </b>
+                </label>
+            <label class="form-check-label">
+            <input id="pna" type="text" class="form-control" name="policyname" placeholder="Policy Holder Name" required>
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Date of Commencement : </b>
+                </label>
+            <label class="form-check-label">
+            <input id="doc" type="date" class="form-control" name="doc" required>
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Select Mode : </b>
+                </label>
+            <label class="form-check-label">
+              <select id="mode" class="form-control" name="mode" required>
+                <option value="" disabled selected>-Select_Mode-</option>
+                <option value="Yearly">Yearly</option>
+                <option value="Halfyearly">Halfyearly</option>
+                <option value="Quaterly">Quaterly</option>
+                <option value="Monthly">Monthly</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Select Term : </b>
+                </label>
+            <label class="form-check-label">
+              <select id="term" class="form-control" name="term" required>
+                <option value="" disabled selected>-Select_Term-</option>
+                <option value="108/12">108/12</option>
+                <option value="10/20">10/20</option>
+                <option value="8/10">8/10</option>
+                <option value="12/11">12/11</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Premium Amount : </b>
+                </label>
+            <label class="form-check-label">
+            <input id="rs" type="tel" class="form-control" name="premium" placeholder="Premium Amount" required>
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Bond Received ? </b>
+                </label>
+            <label class="form-check-label">
+              <select id="bond" class="form-control" name="bond" required>
+                <option value="" disabled selected>-Select-</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Bond received Date : </b>
+                </label>
+            <label class="form-check-label">
+            <input id="brd" type="date" class="form-control" name="brd" required>
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1">
+                  <b>Bond received By : </b>
+                </label>
+            <label class="form-check-label">
+            <input id="brb" type="text" class="form-control" name="brb" placeholder="Bond Received By" required>
+            </label>
+          </div>
+          <div>
+          <input class="btn btn-success" type="submit"  value="Save" style="width:35%" id="create">
+          <input class="btn btn-danger" id="res" type="button" value="Reset"style="width:35%">
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery.js"></script>   
+<script>
+$("#create").on("click",function(e){
+  e.preventDefault();
+  var pnu =$("#pnu").val();
+  var pna =$("#pna").val();
+  var doc =$("#doc").val();
+  var mode =$("#mode").val();
+  var term =$("#term").val();
+  var rs =$("#rs").val();
+  var bond =$("#bond").val();
+  var brd =$("#brd").val();
+  var brb =$("#brb").val();
+
+  $.ajax({
+    url: "savepolicy.php",
+    type: "POST",
+    data : {policynum:pnu,policyname:pna,daoc:doc,md:mode,te:term,premium:rs,bonds:bond,bondrd:brd,bondrb:brb},
+  success : function(data){
+   if(data == 1){
+     alert("Save Record Successfully.");
+     $("#form1").trigger("reset");
+   }else{
+    $("#mes").html("Can't save record.").slideDown();
+   }
+  }
+  });
+});
+
+$("#res").on("click",function(e){
+$("#form1").trigger("reset");
+});
+
+</script>
+
+
+<!-- JAVASCRIPT JS FILES --> 
+
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/nivo-lightbox.min.js"></script> 
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.sticky.js"></script> 
+<script src="js/jquery.parallax.js"></script> 
+<script src="js/wow.min.js"></script> 
+<script src="js/custom.js"></script>
+</body>
+</html>

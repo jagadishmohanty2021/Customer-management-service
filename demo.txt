@@ -1,0 +1,16 @@
+$("#print").on("click",function(e){
+        var divToPrint=document.getElementById("result");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+      });
+
+      if(isset($_FILES['image'])){
+    echo "<pre>";
+    print_r($_FILES);
+    echo "</pre>";
+}
+
+
+CREATE TABLE `lic`.`personal` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `fname` VARCHAR(100) NOT NULL , `mname` VARCHAR(100) NOT NULL , `hname` VARCHAR(100) NOT NULL , `dob` DATE NOT NULL , `ani` DATE NOT NULL , `add` VARCHAR(100) NOT NULL , `mail` VARCHAR(100) NOT NULL , `phone` INT(20) NOT NULL , `acard` VARCHAR(100) NOT NULL , `photo` VARCHAR(100) NOT NULL , `pancard` VARCHAR(100) NOT NULL , `matric` VARCHAR(100) NOT NULL , `it` VARCHAR(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

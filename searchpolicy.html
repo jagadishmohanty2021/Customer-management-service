@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LIC|NARESH MEHER</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+ <!-- STYLESHEET CSS FILES -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/nivo-lightbox.css">
+<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+<link rel="stylesheet" href="css/templatemo-style.css">
+<style>
+th{
+  color:blue;
+  font-style: oblique;
+}
+td{
+  font-weight: bold;
+  color:black;
+}
+
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<!-- preloader section -->
+<div class="preloader">
+  <div class="sk-spinner sk-spinner-rotating-plane"></div>
+</div>
+<!-- navigation section -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> </button>
+      <a href="#" class="navbar-brand"><img class="nav navbar-brand"src="images/LIC_LOGO_1.png" alt="liclogo">LIC | CMS</a></div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="policy.html"class="smoothScroll" >POLICY DETAILS ENTRY</a></li>
+        <li><a href="#"class="active">SEARCH POLICY</a></li>
+        <li><a href="personal.html" class="smoothScroll">PERSONAL DETAILS ENTRY</a></li>
+        <li><a href="searchpersonal.html" class="smoothScroll">SEARCH DETAILS</a></li>
+        <a href="logout.php"><span id="log" class="btn btn-danger" style="margin-top: 15px;font-size: large;text-shadow: 2px 2px black;"><i class="glyphicon glyphicon-off"></i> Logout</span></a>
+        
+      </ul>
+    </div>  
+  </div>
+</div>
+
+<!-- policy details entry section -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 title">
+        <h2>Customer Management System</h2>
+        <h3>Search Policy Details</h3>
+        <hr>
+        <!--<p style="color:white;"></p>-->
+        <form class="form" id="form" method="POST">
+          <div class="form-check-inline">
+           
+            <label class="form-check-label">
+            <input type="tel" class="form-control" name="policynum"placeholder="Policy Number" id="pnum" required>
+            </label>
+            
+          <input class="btn btn-success" type="submit" id="sea" value="Search">
+          <!--<input class="btn btn-danger" id="res" type="submit" value="Reset">-->
+          </div>
+        </form><br>
+        <table width="100%" style="text-align: left;border:none;"id="result"></table>
+        <br>
+        <button class="btn btn-warning" id="but">Print</button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- JAVASCRIPT JS FILES --> 
+<script src="js/jquery.js"></script> 
+<script>
+  $("#but").hide();
+$("#sea").on("click",function(e){
+  e.preventDefault();
+  var policy=$("#pnum").val();
+  $.ajax({
+    url : "policysearch.php",
+    type : "POST",
+    data : {policyn:policy},
+    success:function(data){
+    $("#result").html(data);
+      $("#but").show();
+  }
+  });
+});
+
+$("#but").on("click",function(e){
+   var divToPrint=document.getElementById("result");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+});
+
+$("#res").on("click",function(e){
+    e.preventDefault();
+    $("#form").trigger("reset");
+    
+    });
+</script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/nivo-lightbox.min.js"></script> 
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.sticky.js"></script> 
+<script src="js/jquery.parallax.js"></script> 
+<script src="js/wow.min.js"></script> 
+<script src="js/custom.js"></script>
+</body>
+</html>
